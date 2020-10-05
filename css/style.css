@@ -1,13 +1,52 @@
-@-webkit-keyframes fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
-@-moz-keyframes    fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
-@-o-keyframes      fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
-@keyframes         fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
- 
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fade-in {
+    0% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fade-in {
+    0% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 body {
-  -webkit-animation: fade-in 1.5s linear; /* Safari 4+ */
-  -moz-animation: fade-in 1.5s linear; /* Fx 5+ */
-  -o-animation: fade-in 1.5s linear; /* Opera 12+ */
-  animation: fade-in 1.5s linear; /* IE 10+, Fx 29+ */
+    -webkit-animation: fade-in 1.5s linear;
+    /* Safari 4+ */
+    -moz-animation: fade-in 1.5s linear;
+    /* Fx 5+ */
+    -o-animation: fade-in 1.5s linear;
+    /* Opera 12+ */
+    animation: fade-in 1.5s linear;
+    /* IE 10+, Fx 29+ */
 }
 
 body {
@@ -44,14 +83,19 @@ body {
     color: #ffffff;
 }
 
+.main {
+    min-height: 1080px;
+    background-image: url("../img/bg1.jpg");
+    background-repeat: no-repeat;
+}
+
 .image-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 80px;
-    margin-bottom: 190px;
 }
 
 .door {
+    position: absolute;
+    top: 413px;
+    left: 750px;
     cursor: pointer;
 }
 
@@ -102,19 +146,23 @@ body {
 }
 
 .tremor {
-    -webkit-animation: 0.1s tremor ease-out 5;  
-    animation: 0.1s tremor ease-out 5;    
+    -webkit-animation: 0.1s tremor ease-out 5;
+    animation: 0.1s tremor ease-out 5;
 }
 
 @keyframes tremor {
-	0%, 25% {
-		left: -1px;
+
+    0%,
+    25% {
+        left: -1px;
         -webkit-transform: translateX(-4%) translateY(-4%);
         transform: translateX(-4%) translateY(-4%);
-	}
-	50%, 100% {
-		left: 1px;
+    }
+
+    50%,
+    100% {
+        left: 1px;
         -webkit-transform: translateX(10%) translateY(10%);
         transform: translateX(10%) translateY(10%);
-	}
+    }
 }
