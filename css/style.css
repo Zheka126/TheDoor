@@ -1,33 +1,3 @@
-@-webkit-keyframes fade-in {
-    0% {
-        opacity: 0.1;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes fade-in {
-    0% {
-        opacity: 0.1;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-o-keyframes fade-in {
-    0% {
-        opacity: 0.1;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
 @keyframes fade-in {
     0% {
         opacity: 0.1;
@@ -35,6 +5,24 @@
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes tremor {
+    0% {
+        transform: translateX(10%) translateY(5%);
+    }
+
+    25% {
+        transform: translateX(-10%) translateY(-5%);
+    }
+
+    50% {
+        transform: translateX(10%) translateY(5%);
+    }
+
+    75% {
+        transform: translateX(-10%) translateY(-5%);
     }
 }
 
@@ -47,9 +35,7 @@ body {
     /* Opera 12+ */
     animation: fade-in 1.5s linear;
     /* IE 10+, Fx 29+ */
-}
 
-body {
     margin: 0;
     background-color: #c0c0c0;
     font-family: Roboto, Arial, Helvetica, sans-serif;
@@ -71,30 +57,16 @@ body {
     overflow: hidden;
 }
 
-.header {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    background-color: #424242;
-    box-shadow: 0px 15px 30px 15px #000000;
-    border: none;
-    font-size: 27px;
-    color: #ffffff;
-}
-
 .main {
+    position: relative;
     min-height: 1080px;
     background-image: url("../img/bg1.jpg");
     background-repeat: no-repeat;
 }
 
-.image-container {
-}
-
 .door {
     position: absolute;
-    top: 413px;
+    top: 278px;
     left: 750px;
     cursor: pointer;
 }
@@ -103,7 +75,7 @@ body {
     position: absolute;
     background-repeat: no-repeat;
     z-index: -1;
-    margin-top: -100px;
+    margin-top: -10px;
     background-repeat: no-repeat;
 }
 
@@ -146,23 +118,5 @@ body {
 }
 
 .tremor {
-    -webkit-animation: 0.1s tremor ease-out 5;
     animation: 0.1s tremor ease-out 5;
-}
-
-@keyframes tremor {
-
-    0%,
-    25% {
-        left: -1px;
-        -webkit-transform: translateX(-4%) translateY(-4%);
-        transform: translateX(-4%) translateY(-4%);
-    }
-
-    50%,
-    100% {
-        left: 1px;
-        -webkit-transform: translateX(10%) translateY(10%);
-        transform: translateX(10%) translateY(10%);
-    }
 }
